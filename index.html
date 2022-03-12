@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;1,600&family=Hubballi&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="header__heading">To Do List Magic</h2>
+    </header>
+    <main class="main contenedor">
+        <div class="main__grid">
+            <form id="form">
+                <div class="main__addcontent">
+                    <input class="main__field" id="task" type="text" placeholder="Enter some activity">
+                </div>
+            </form>
+            <div class="main__options">
+                <label class="main__options-items" id="count">0 items left</label>
+                <div class="main__options-buttons">
+                    <button class="main__options-b option--active" data-filter="all">All</button>
+                    <button class="main__options-b" data-filter="missing">Missing</button>
+                    <button class="main__options-b" data-filter="completed">Completed</button>
+                </div>
+                <label class="main__options-clear">Clear all</label>
+            </div>
+            <div class="main__content d-none">
+                <ul class="main__list" id="taskList"></ul>
+            </div>
+        </div>
+        <div class="alert hide" id="alert">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg">INGRESE UNA ACTIVIDAD</span>
+            <div class="close-btn">
+                <span class="fas fa-times"></span>
+            </div>
+        </div>
+    </main>
+    <footer class="footer contenedor">
+        <p class="footer__copyright">© All rights reserved</p>
+    </footer>
+</body>
+<script src="./js/index.js"></script>
+<script src="./js/filter.js"></script>
+</html>
